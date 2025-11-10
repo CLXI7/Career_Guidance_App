@@ -26,7 +26,8 @@ career_goal = st.text_input(
 # CONFIGURE GEMINI SDK
 # -----------------------------
 # Replace with your actual API key
-genai.configure(api_key="AIzaSyD_5sDTYNRPimUENSnJVL5Uyq38NWQI_gA")
+api_key = st.secrets["GEMINI_API_KEY"]
+genai.configure(api_key=api_key)
 
 # Initialize the Gemini model
 gemini_model = genai.GenerativeModel('gemini-2.5-flash')
